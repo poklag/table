@@ -1,20 +1,175 @@
-<%-- 
-    Document   : index
-    Created on : Jun 14, 2014, 10:49:52 AM
-    Author     : Pon
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>jsTraining</title>
-        <script type="text/javascript" src="js/train1.js"></script>
-        <link rel="stylesheet" type="text/css" href="" />
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        <div id="name">Test</div>
-    </body>
+	<head>
+		<link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap-modal-bs3patch.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-modal.min.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+
+		<script src="jquery.min.js"></script>
+		<script src="jquery-ui.min.js"></script>
+		<script src="jquery.ui.touch-punch.min.js"></script>
+		<script src="Chart.min.js"></script>
+		<script src="bootstrap-modal.pack.min.js"></script>
+
+
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div id="table_div">
+			
+			<table class="outer-table table table-bordered">
+
+				<tr>
+					<td colspan="4" rowspan="3">&nbsp;</td>
+					<th colspan="6" class="swapable column">Categories</th>
+				</tr>
+				<tr data-row-filter-level="1">
+					<th colspan="2" class="swapable column" data-column="0">CAT-1</th>
+					<th colspan="2" class="swapable column" data-column="1">CAT-2</th>
+					<th colspan="2" class="swapable column" data-column="2">CAT-3</th>
+				</tr>
+				<tr data-row-filter-level="2">
+					<th class="swapable column" data-column="0" data-parent-column="0">CAT-1A</th>
+					<th class="swapable column" data-column="1" data-parent-column="0">CAT-1B</th>
+					<th class="swapable column" data-column="2" data-parent-column="1">CAT-2A</th>
+					<th class="swapable column" data-column="3" data-parent-column="1">CAT-2B</th>
+					<th class="swapable column" data-column="4" data-parent-column="2">CAT-3A</th>
+					<th class="swapable column" data-column="5" data-parent-column="2">CAT-3B</th>
+				</tr>
+
+				<tr>
+					<th rowspan="8" class="swapable row root">
+						<span class="">A1.1</span>
+					</th>
+					<th rowspan="4" class="swapable row"><span class="">A2.1</span></th>
+					<th rowspan="2" class="swapable row"><span class="">A3</span></th>
+					<th rowspan="1" class="swapable row" data-row="0"><span class="">SID1</span></th>
+
+					<td rowspan="8" colspan="6" class="table-container">
+						<div class="inner-table-wrapper">
+							<div class="expansion">
+								<button class="close align-right">X</button>
+								<table id="expansion-table" class="table table-bordered table-striped">
+									<tbody></tbody>
+								</table>
+							</div>
+							<table class="inner-table table table-hover table-striped ">
+								<tr data-parent-row="0">
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+								</tr>
+								<tr data-parent-row="1">
+									<td>ee</td>
+									<td>ee</td>
+									<td>ee</td>
+									<td>ee</td>
+									<td>ee</td>
+									<td>ee</td>
+								</tr>
+								<tr data-parent-row="2">
+									<td>aw</td>
+									<td>sd</td>
+									<td>cs</td>
+									<td>aw</td>
+									<td>bq</td>
+									<td>cq</td>
+								</tr>
+								<tr data-parent-row="3">
+									<td>ao</td>
+									<td>bk</td>
+									<td>ck</td>
+									<td>at</td>
+									<td>bh</td>
+									<td>cl</td>
+								</tr>
+								<tr data-parent-row="4">
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+								</tr>
+								<tr data-parent-row="5">
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+								</tr>
+								<tr data-parent-row="6">
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+								</tr>
+								<tr data-parent-row="7">
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+									<td>a</td>
+									<td>b</td>
+									<td>c</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th class="swapable row" data-row="1"><span class="">SID2</span></th>
+				</tr>
+
+				<tr>
+					<th rowspan="2" class="swapable row"><span class="">ATTR-1B</span></th>
+					<th class="swapable row" data-row="2"><span class="">SID3</span></th>
+				</tr>
+				<tr>
+					<th class="swapable row" data-row="3"><span class="">SID4</span></th>
+				</tr>
+
+				<tr>
+					<th rowspan="4" class="swapable row"><span class="">A2.2</span></th>
+					<th rowspan="2" class="swapable row"><span class="">ATTR-2A</span></th>
+					<th class="swapable row" data-row="4"><span class="">SID5</span></th>
+				</tr>
+				<tr>
+					<th class="swapable row" data-row="5"><span class="">SID6</span></th>
+				</tr>
+				<tr>
+					<th rowspan="2" class="swapable row"><span class="">ATTR-2B</span></th>
+					<th class="swapable row" data-row="6"><span class="">SID7</span></th>
+				</tr>
+				<tr>
+					<th class="swapable row" data-row="7"><span class="">SID8</span></th>
+				</tr>
+			</table>
+		</div>
+
+		&nbsp;<button id="showChart" data-toggle="modal" class="btn btn-primary btn-large">Show graph</button>
+
+		<div class="contextmenu cell">
+			<ul>
+				<li data-action="expand-row">Expand row</li>
+				<li data-action="expand-column">Expand column</li>
+				<li data-action="expand-diagonally" class="separator">Expand diagonally</li>
+
+				<li data-action="delete-row">Shrink row</li>
+				<li data-action="delete-column">Shrink column</li>
+				<li data-action="delete-both">Shrink diagonally</li>
+			</ul>
+		</div>
+
+		<div class="chart-popup modal fade">
+			<canvas id="chart" width="890" height="460"></canvas>
+		</div>
+
+	</body>
 </html>
