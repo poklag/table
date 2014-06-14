@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<!-- <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" /> -->
+		<!-- <link href="//handsontable.com/dist/jquery.handsontable.full.css" rel="stylesheet" type="text/css" /> -->
+
+		<link rel="stylesheet" type="text/css" href="/styles2.css" />
+
+	</head>
+
+	<body>
+		<div id="table_div">
+
+			<script type="text/tempate" id="row-filters-template">
+			</script>
+			
+			<div class="row-filters" id="row-filters">
+			</div>
+
+			<script type="text/tempate" id="filter-template">
+				<div class="filter" data-id="@item.id">@item.id</div>
+			</script>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+		
+		<!-- <script src="//handsontable.com/dist/jquery.handsontable.full.js"></script> -->
+		<!-- <script src="//wwwendt.de/tech/demo/jquery-contextmenu/jquery.ui-contextmenu.js"></script> -->
+
+		<script src="/filters.js"></script>
+		<script src="/index2.js"></script>
+	</body>
+</html>

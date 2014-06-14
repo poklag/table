@@ -1,0 +1,190 @@
+.table{
+	width: auto;
+}
+
+.outer-table{
+	width: 1024px;
+}
+
+#expansion-table{
+	width: 100%;
+}
+
+.table td,
+.table th{
+	box-sizing: border-box;
+
+	-webkit-transition: width 0.2s, height 0.2s;
+	-moz-transition: width 0.2s, height 0.2s;
+	-ms-transition: width 0.2s, height 0.2s;
+	-o-transition: width 0.2s, height 0.2s;
+	transition: width 0.2s, height 0.2s;
+}
+
+.table td{
+	text-align: center;
+}
+
+.inner-table{
+	margin: 0;
+}
+
+.table-container{
+	width: 540px;
+}
+
+.expansion{
+	display: none;
+	background-color: white;
+	position: absolute;
+	z-index: 1;
+
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.expansion button.close{
+	display: block;
+	border-radius: 12px;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	background-color: white;
+	left: -5px;
+	top: -5px;
+	opacity: 1;
+	font-size: 12px;
+
+	outline: none;
+	color: #DF0101;
+
+	box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.inner-table-wrapper{
+	position: relative;
+}
+
+.outer-table th{
+	text-align: center;
+}
+
+.outer-table>tbody>tr>td.table-container{
+	padding: 0;
+}
+
+.inner-table.table>tbody>tr>td{
+	border-top: none;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.inner-table.table>tbody>tr>td:last-child{
+	border-right: none;
+}
+
+.inner-table.table>tbody>tr:last-child td{
+	border-bottom: none;
+}
+
+.contextmenu{
+	background-color: #efefef;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	min-width: 150px;
+	position: absolute;
+	display: none;
+}
+
+.contextmenu ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.contextmenu li{
+	display: block;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+.contextmenu li.separator{
+	border-bottom: 1px solid gray;
+}
+
+.contextmenu li:hover{
+	background-color: #000022;
+	color: white;
+}
+
+.chart-popup{
+	background-color: white;
+}
+
+.swapable{
+	cursor: move;
+	background-color: white;
+}
+
+.swapable span{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.swapable:hover{
+	background-color: #DF0101;
+	color: white;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.ui-droppable.ui-state-hover{
+	background-color: #DF0101;
+	color: white;
+}
+
+.ui-draggable-dragging{
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	z-index: 9999;
+	border: none 0 !important;
+
+	border-radius: 3px;
+}
+
+.ui-draggable-dragging .rotate{
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	-ms-transform: rotate(0);
+	-o-transform: rotate(0);
+	transform: rotate(0);
+
+}
+
+.outer-table.table th, .inner-table.table td{
+	vertical-align: middle;
+}
+
+.table.inner-table tr>td:hover{
+	background-color: #FBEFF2;
+}
+
+.rotate {
+	/*display: block;*/
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+
+	/* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	/* Should be unset in IE9+ I think. */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
