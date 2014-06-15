@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="bootstrap-modal-bs3patch.css" rel="stylesheet" type="text/css" />
+        <link href="bootstrap-modal.min.css" rel="stylesheet" type="text/css" />
+        
+        <script src="jquery.min.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <script src="jquery-test.js"></script>
+        <script src="jquery-sortable.js"></script>
+        
+        <style type="text/css">
+            .container,
+            .droppable-container{
+                vertical-align: bottom;
+                display: inline-block;
+                background-color:  #efefef;
+                width: 300px;
+                height:300px;
+                
+                margin: 20px;
+                border: 1px solid;
+            }
+            
+            .draggable{
+                display: inline-block;
+/*                width: 150px;*/
+                padding: 5px;
+                border: 1px solid;
+                background-color: #ff9966;
+            }
+            
+            .man{
+                background-color: #ffffcc;
+            }
+            
+            .girl{
+                background-color: #ffcccc;
+            }
+            
+            .gay{
+                background-color: #cc66ff;
+            }
+            
+            .active{
+                background-color: #00cccc;
+            }
+            .active:after{
+                content: "วางที่นี่";
+                font-size: 200%;
+                color: #000000;
+            }
+            
+            .hovering{
+                background-color: #ccffcc;
+            }
+            
+            .hovering:after{
+                content: "วางจิ";
+                font-size: 200%;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="draggable man" data-name="name1">Name 1</div>
+            <div class="draggable gay" data-name="name2">Name 2</div>
+            <div class="draggable girl" data-name="name3">Name 3</div>
+            <div class="draggable man" data-name="name4">Name 4</div>
+            <div class="draggable girl" data-name="name5">Name 5</div>
+        </div>
+        
+        <div class="droppable-container">
+            
+        </div>
+    </body>
+</html>
